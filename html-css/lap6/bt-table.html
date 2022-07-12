@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style-table.css">
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-header">
+        <div class="container">
+            <div class="d-flex j-between">
+                <div class="box-header text-center text-white header-hover">Miền Bắc</div>
+                <div class="box-header text-center text-white header-hover">Miền Trung</div>
+                <div class="box-header text-center text-white header-hover">Miền Nam</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <div class="container">
+            <div class="box-content m-top">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="d-flex a-center j-between m-top m-bottom">
+                                    <i class="fa-solid fa-print m-left"></i>
+                                    <div class="text-red">SỔ XỐ TRUYỀN THÔNG</div>
+                                    <i class="fa-solid fa-volume-high m-right"></i>
+                                </div>
+                                <p class="m-bottom">Thứ hai ngày 20-06-2022</p>
+                            </th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="tb-hover bg">Ký tự</td>
+                            <td colspan="4" class="tb-hover bg">13ZE-6ZE-4ZE-9ZE-1ZE-14ZE</td>
+                        </tr>
+                        <tr>
+                            <td class="t-red tb-hover">Đặc biệt</td>
+                            <td colspan="4" class="t-red t-fontsize tb-hover">71808</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-hover bg">Giải nhất</td>
+                            <td colspan="4" class="tb-hover bg"><b class="t-num">24479</b></td>
+                        </tr>
+                        <tr>
+                            <td class="tb-hover">Giải nhì</td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">90383</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">30364</b></td>
+                        </tr>
+                        <tr class="bg">
+                            <td rowspan="2" class="tb-hover">Giải ba</td>
+                            <td class="tb-hover"><b class="t-num">75004</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">74192</b></td>
+                            <td class="tb-hover"><b class="t-num">85474</b></td>
+                        </tr>
+                        <tr class="bg">
+                            <td class="tb-hover"><b class="t-num">35965</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">24574</b></td>
+                            <td class="tb-hover"><b class="t-num">05315</b></td>
+                        </tr>
+                        <tr>
+                            <td class="tb-hover">Giải tư</td>
+                            <td class="tb-hover"><b class="t-num">6798</b></td>
+                            <td class="tb-hover"><b class="t-num">6633</b></td>
+                            <td class="tb-hover"><b class="t-num">2959</b></td>
+                            <td class="tb-hover"><b class="t-num">8954</b></td>
+                        </tr>
+                        <tr class="bg">
+                            <td rowspan="2" class="tb-hover">Giải năm</td>
+                            <td class="tb-hover"><b class="t-num ">3354</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">2503</b></td>
+                            <td class="tb-hover"><b class="t-num">8187</b></td>
+                        </tr>
+                        <tr class="bg">
+                            <td class="tb-hover"><b class="t-num">1722</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">7345</b></td>
+                            <td class="tb-hover"><b class="t-num">4980</b></td>
+                        </tr>
+                        <tr>
+                            <td class="tb-hover"> Giải sáu</td>
+                            <td class="tb-hover"><b class="t-num">152</b></td>
+                            <td colspan="2" class="tb-hover"><b class="t-num">770</b></td>
+                            <td class="tb-hover"><b class="t-num">946</b></td>
+                        </tr>
+                        <tr class="bg">
+                            <td class="tb-hover">Giải bảy</td>
+                            <td class="tb-hover"><b class="t-num">45</b></td>
+                            <td class="tb-hover"><b class="t-num">33</b></td>
+                            <td class="tb-hover"><b class="t-num">95</b></td>
+                            <td class="tb-hover"><b class="t-num">20</b></td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <div class="d-flex j-center">
+                                    <div class="m-right">Chỉ hiện thị:</div>
+
+                                    <form action="form-fiel" class="d-flex">
+                                        <div class="d-flexrow a-center m-right">
+                                            <label for="num-2" class="m-left5">2 chữ số</label>
+                                            <input type="radio" name="numrber" id="num-2">
+                                        </div>
+
+                                        <div class="d-flexrow a-center m-right">
+                                            <label for="num-3" class="m-left5">3 chữ số</label>
+                                            <input type="radio" name="numrber" id="num-3">
+                                        </div>
+
+                                        <div class="d-flexrow a-center">
+                                            <label for="full" class="m-left5">Đầy đủ</label>
+                                            <input type="radio" name="numrber" id="full">
+                                        </div>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+</html>

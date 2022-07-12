@@ -1,0 +1,72 @@
+* box-sizing{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.square-small{
+    width: 200px;
+    height: 200px;
+}
+.square-medium{
+    width: 400px;
+    height: 400px;
+}
+.square-large{
+    width: 800px;
+    height: 800px;
+}
+.bg-small{
+   background-color: red;
+}
+.bg-medium{
+   background-color: green;
+}
+.bg-large{
+    background-color: blue;
+}
+.border-solid{
+    border-style: solid;
+}
+.border-dashed{
+    border-style: dashed;
+}
+.border-dotted{
+    border-style: dotted;
+}
+
+.border-thin{
+    border-width: 5px;
+}
+.border-medium{
+    border-width: 10px;
+}
+.border-thick{
+    border-width: 15px;
+}
+.border-yellow{
+    border-color: yellow;
+}
+.border-cyan{
+    border-color: cyan;
+}
+.border-brown{
+    border-color: brown;
+}
+.overflow{
+    overflow: auto;
+}
+.mg-10{
+    margin-bottom: 10px;
+
+}
+.mg-30{
+    margin-bottom: 30px;
+}
+.mg-50{
+    margin-bottom: 50px;
+}

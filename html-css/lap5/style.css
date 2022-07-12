@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1320px;
+}
+
+.row{
+    display: flex;
+}
+
+.d-flex{
+    display: flex;
+    list-style: none;
+}
+
+.a-center{
+    align-items: center;
+}
+
+.j-end{
+    justify-content: flex-end;
+}
+.j-center{
+    justify-content: center;
+}
+
+.j-between{
+    justify-content: space-between;
+}
+.box-cart{
+    padding: 10px 40px;
+    border: 2px solid greenyellow;
+    content: "";
+}
+
+.box-black{
+    background-color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    content: "";
+}
+
+.box-select{
+    padding: 5px;
+    border: 2px solid grey;
+    content: "";
+}
+
+.text-white{
+    color: white;
+}
+.box-white{
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid grey;
+    content: "";
+}
+.menu-link{
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+.divider{
+    align-self: stretch;
+    border-right: 1px dashed gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.m-bottom{
+    margin-bottom: 50px;
+}
+.m-top{
+    margin-top: 20px
+}
+
+.m-headertop{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.m-right{
+    margin-right: 10px;
+}
+
+.p-right{
+    padding-right: 20px;
+}
+
+.p-left{
+    padding-left: 20px;
+}
+.b-top{
+    border-top: 2px solid gray;
+}
+.b-bottom{
+    border-bottom: 2px solid gray;
+}
+.padding{
+    padding: 20px 0px;
+}
+
+.col-1{
+    width: 8.333333%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+}
+
+.col-2{
+    width: 16.666667%;
+}
+
+.col-3{
+    width: 25%;
+}
+
+.col-4{
+    width: 33.333333%; 
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.col-5{
+    width: 41.666667%; 
+}
+.col-6{
+    width: 50%; 
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-7{
+    width: 58.333333%;
+}
+
+.col-8{
+    width: 66.666667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.col-9{
+    width: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.col-10{
+    width: 83.333333%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.col-11{
+    width: 91.666667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.col-12{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-price{
+    color:cadetblue;
+    font-size: 30px;
+}
+.text-cadetblue{
+    color: cadetblue;
+}
+.footer{
+    background-color: aquamarine;
+    padding: 20px 0px;
+}
+
+.ul-li{
+    list-style-position: inside;
+}

@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.d-flex{
+    display: flex;
+}
+.j-between{
+    justify-content: space-between;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+.top-10{
+    top: 10px;
+}
+.left-10{
+    left: 10px;
+}
+.bottom-10{
+    bottom: 10px;
+}
+.left-10{
+    left: 10px;
+}
+.right-10{
+    right: 10px;
+}
+.text-white{
+    color: white;
+}

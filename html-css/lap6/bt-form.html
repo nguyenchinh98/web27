@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style-form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box-content">
+            <section class="section-header">
+                <div class="d-flex j-between">
+                    <h1 class="text">Đăng ký</h1>
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+                <p class="text-color">Nhanh chóng và dễ dàng.</p>
+            </section>
+
+            <hr class="hr">
+
+            <form action="form-fiel">
+                <div class="d-flex j-between">
+                    <input type="text" name="họ" id="họ" placeholder="Họ" class="box-name bg">
+                    <input type="text" name="tên" id="tên" placeholder="Tên" class="box-name bg">
+                </div>
+
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Số di động hoặc email" class="box1 m-top bg">
+                    <input type="password" name="password" id="password" placeholder="Mật khẩu mới" class="box1 m-top bg">
+                </div>
+
+                <div class="d-flex m-top m-bottom">
+                    <p>Sinh nhật</p>
+                    <i class="fa-solid fa-question"></i>
+                </div>
+
+                <div class="d-flex j-between">
+                    <select name="day" id="day" class="box padding">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                    <select name="month" id="month" class="box padding">
+                        <option value=" 1">Tháng 1</option>
+                        <option value="2">Tháng 2</option>
+                        <option value="3">Tháng 3</option>
+                    </select>
+
+                    <select name="year" id="year" class="box padding">
+                        <option value="1">2022</option>
+                        <option value="2">2021</option>
+                        <option value="3">2020</option>
+                    </select>
+                </div>
+
+                <div class="d-flex m-top m-bottom">
+                    <p>Giới tính</p>
+                    <i class="fa-solid fa-question"></i>
+                </div>
+                
+                <div class="d-flex j-between">
+                    <div class="box padding">
+                        <div class="d-flex a-center j-between">
+                            <label for="female">Nữ</label>
+                            <input type="radio" name="gender" id="female">
+                        </div>
+                    </div>
+                    <div class="box padding">
+                        <div class="d-flex a-center j-between">
+                            <label for="male">Nam</label>
+                            <input type="radio" name="gender" id="male">
+                        </div>
+                    </div>
+                    <div class="box padding">
+                        <div class="d-flex a-center j-between">
+                            <label for="option">Tùy chọn</label>
+                            <input type="radio" name="gender" id="option">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <p class="m-top">Người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.
+                <a href="" class="a">Tìm hiểu thêm.</a></p>
+            <p class="m-top">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="" class="a">Điều khoản</a>, <a href="" class="a">Chính sách dữ liệu</a> và <a href="" class="a">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.</p>
+            
+            <div class="m-top d-flex j-center">
+                <button class="box-button but-hover">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
