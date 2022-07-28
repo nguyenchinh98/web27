@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const div = document.getElementById("app")
+        const h1 = document.createElement("h1");
+        h1.innerHTML = "Image Modal";
+        app.append(h1)
+
+        const p1 = document.createElement("p")
+        const p2 = document.createElement("p");
+        p1.innerHTML = "In this example, we use CSS to create a modal (dialog box) that is hidden by default."
+        p2.innerHTML = "We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's \"alt\" attribute as an image caption text inside the modal."
+        app.append(p1);
+        app.append(p2);
+        const img = document.createElement("img");
+        img.src = "https://www.w3schools.com/howto/img_snow.jpg";
+        img.alt = "ảnh";
+        app.append(img)
+    
+    </script>
+</body>
+</html>

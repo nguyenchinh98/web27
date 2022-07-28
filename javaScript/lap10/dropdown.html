@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: aquamarine;
+            border: 0;
+            padding: 8px 15px;
+
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            padding: 8px 15px;
+        }
+        .menu{
+            display: none;
+        }
+        .open{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn" onclick="dropdown(this)">Dropdown</button>
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Product</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+       function dropdown(el){
+        document.querySelector(".menu").classList.toggle("open")
+       }
+
+       window.onclick = function(event){
+        let open = document.querySelector(".open");
+        if (open && !event.target.matches(".btn")){
+            open.classList.remove("open")
+        }
+       }
+
+    </script>
+</body>
+</html>

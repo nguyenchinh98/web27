@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            width: 100%;
+        }
+        table, td, th{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        td, th{
+            padding: 6px 10px;
+        }
+        table, thead{
+            text-align: left;
+        }
+        .tdfoot{
+            text-align: right;
+        }
+        p{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="abc">
+        <h1>Hóa đơn ăn nhậu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Mức đóng góp</th>
+                    <th>Nhận xét</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                
+            </tbody>
+            
+
+        </table>
+    </div>
+    
+    <script>
+        const user = [
+            {
+                id: 1,
+                name: "Giang Hồng Sơn",
+                money: 1000000,
+                comment: "Sugar Daddy"
+            },
+            {
+                id: 2,
+                name: "Nguyễn Thế Anh",
+                money: 200000,
+                comment: "Sugar Brother"
+            },
+            {
+                id: 3,
+                name: "Bùi Lan Nhi",
+                money: 100000,
+                comment: "Định mời Nhi ăn tối hóa ra lại thành bữa tối của Nhi :("
+            },
+            {
+                id: 4,
+                name: "Nguyễn Hữu Hà",
+                money: 150000,
+                comment: "Tuổi trẻ tài cao"
+            },
+            {
+                id: 5,
+                name: "Phạm Hồng Anh",
+                money: 100000,
+                comment: "Lúc đầu gáy to, về sau hơi rén"
+            },
+            {
+                id: 6,
+                name: "Nguyễn Văn Hùng",
+                money: 100000,
+                comment: "Bị buồn"
+            },
+            {
+                id: 7,
+                name: "Nguyễn Văn Tùng",
+                money: 200000,
+                comment: "Kèo nào cũng cân"
+            },
+            {
+                id: 8,
+                name: "Bùi Minh Đức",
+                money: 100000,
+                comment: "Hơi rén, lần sau cân mạnh hơn"
+            },
+            {
+                id: 9,
+                name: "Dương Đức Thịnh",
+                money: 100000,
+                comment: "Mồm to húp hết nửa bill"
+            },
+            {
+                id: 10,
+                name: "Thầy Giáo Barr",
+                money: 100000,
+                comment: "Cám ơn Nhi đã mời mình"
+            }
+        ];
+
+        for (let i = 0; i < user.length; i++){
+
+        
+        const tr = document.createElement("tr");
+        const td1 = document.createElement("td");
+        td1.innerHTML = user[i].id;
+        const td2 = document.createElement("td");
+        td2.innerHTML =user[i].name;
+        const td3 = document.createElement("td");
+        td3.innerHTML = user[i].money;
+        const td4 = document.createElement("td");
+        td4.innerHTML = user[i].comment;
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        const tbody = document.getElementById("tbody");
+        tbody.appendChild(tr)
+        }
+        const div = document.querySelector(".abc")
+        const i1 = document.createElement("p")
+        i1.innerHTML = "Tổng bill ca 1: 2022000";
+        div.appendChild(i1);
+
+        const i2 = document.createElement("p")
+        i2.innerHTML = "Tổng bill ca 2: 105000";
+        div.appendChild(i2);
+
+        const i3 = document.createElement("p")
+        i3.innerHTML = "Tổng thiệt hại: 2127000";
+        div.appendChild(i3);
+
+        
+
+        function totalMoney(user){
+            let total = 0;
+            for(let i=0; i<user.length; i++){
+                total+= user[i].money;
+            }
+            return total;
+        }
+
+        const i4 = document.createElement("p")
+        i4.innerHTML = "Tổng đóng góp: " + totalMoney(user);
+        div.appendChild(i4);
+
+
+
+        
+
+        
+
+       
+
+
+
+        
+        
+        
+    </script>
+    
+</body>
+</html>

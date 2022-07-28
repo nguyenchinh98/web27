@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        .todo-item.completed{
+            text-decoration: line-through;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contsiner">
+        <header class="header">
+            <h1 class="heading">Simple Todo App</h1>
+        </header>
+        <main class="main">
+            <form action="todo" class="todo" name="todo">
+                <input type="text" name="title" id="">
+                <button class="btn-create">Create</button>
+            </form>
+
+            <div class="todo-list">
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>Tiêu đề</span>
+                    <button class="btn-delete">Delete</button>
+                </div>
+                <div class="todo-item completed">
+                    <input type="checkbox" checked>
+                    <span>Tieu de</span>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    
+
+    <script>
+       //input
+       const todos = [{
+        id: 1,
+        title:"Create todo app",
+        completed: false
+       },
+       {
+        id: 2,
+        title: "Learn jQuery",
+        completed: true,
+       }
+    ];
+
+    const list = document.querySelector(".todo-list")
+    function renderTodoList(todos){
+        const items = todos.map(function(todo){
+            return `
+            <div class= ${!todo.completed ? "todo-item" : "todo-item completed"}>
+                <input type="checkbox" ${todo.completed ? "checked" : ""}>
+                <span class="title">${todo.title}</span>
+                <button class="btn-delete">Delete</button>
+            </div> `;
+        })
+        list.innerHTML = items.join("")
+    }
+    renderTodoList(todos);
+
+
+    
+
+    </script>
+</body>
+</html>

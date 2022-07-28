@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Basic</title>
+    </head>
+    <body>
+        <h1 class="heading">Hello DOM</h1>
+
+        <img class="avatar" src="" alt="" />
+
+        <link class="profile" rel="stylesheet" href="" />
+
+        <ul class="favorite">
+            <li>A</li>
+            <li>Play game</li>
+            <li>Listen music</li>
+            <li>D</li>
+        </ul>
+
+        <div class="clock">Bây giờ là</div>
+
+        <p class="bio">
+            Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai
+            Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai
+            Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai
+            Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai
+            Thầy giáo Ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai
+        </p>
+
+        <p class="num-of-words">
+    
+        </p>
+
+        <table class="list-students">
+            <tbody>
+                <tr>
+                    <td>Giang Hồng Sơn</td>
+                </tr>
+                <tr>
+                    <td>Bùi Lan Nhi</td>
+                </tr>
+                <tr>
+                    <td>Hoàng Thị Ngọc Linh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            const heading = "Thầy giáo Ba đẹp trai 🤓";
+            const avatar = "https://i.imgur.com/2rP9dFO.png";
+            const profile = "https://twitter.com/banx9x";
+            // thay đổi titler thành giá trị của heading
+            document.title = heading;
+            // thay đổi nd h1 thành heading
+            const h1 = document.querySelector(".heading");
+            h1.textContent = heading;
+
+            const img = document.querySelector(".avatar");
+            img.src = "https://d1hjkbq40fs2x4.cloudfront.net/2016-01-31/files/1045.jpg";
+
+            const ul = document.querySelector(".favorite");
+            const firstItem = ul.firstElementChild;
+            firstItem.textContent = "Code application";
+
+            const liEnd = document.querySelector(".favorite");
+            const lastItem = ul.lastElementChild;
+            lastItem.textContent = "Sleep"
+
+            const div = document.querySelector(".clock")
+            const date = new Date();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const second = date.getSeconds();
+            const day = date.getDay();
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            div.textContent = `Bây giờ là: ${hour}:${minute}:${second}, ngày ${day}/${month}/${year}`;
+            // đếm số từ trong đoạn văn p
+            const p = document.querySelector(".bio");
+            const str = p.textContent;
+            
+            function count(name){
+                let arr = str.split(" ");
+                let total = 0;
+                for (let i = 0; i < arr.length; i++){
+                    if (arr[i] === "ba" || arr[i] === "Ba") total +=1;
+                }
+                return total;
+            }
+            // thêm nd cho p
+            const p1 = document.querySelector(".num-of-words")
+            p1.textContent = `Ở đoạn văn trên có ${count(name)} từ Ba`
+            // thêm hàng
+            const table = document.querySelector("tbody");
+            const row = table.insertRow(0);
+            // thêm cột
+            const col = row.insertCell(0);
+            col.innerHTML = "Thầy giáo Ba siêu cấp đẹp trai";
+        </script>
+    </body>
+</html>

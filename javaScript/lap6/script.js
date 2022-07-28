@@ -1,8 +1,8 @@
-// let arr = ["Tuấn", "Đạt", "Nam", "Thuần"];
-// function logUpperName(name){
-//     console.log(name)
-// }
-// arr.forEach(logUpperName)
+ let arr = ["Tuấn", "Đạt", "Nam", "Thuần"];
+ function logUpperName(name){
+     console.log(name)
+ }
+ arr.forEach(logUpperName)
 
 
 // arr.forEach(console.log)

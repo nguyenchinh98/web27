@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="handClick()">Click</button>
+    </div>
+
+    <button class="btn">Hú</button>
+
+    <button class="abc">Đừng Click em</button>
+
+    <button class="xyz">Delete</button>
+
+    <script>
+        function handClick(){  
+            console.log("Clicked!!")
+        };
+//on<eventype>
+        const btn = document.querySelector(".btn");
+        btn.onclick = function(){
+            handClick();
+        }
+
+//addEvenetListener()/ removeEventListener()
+        const ortherBtn = document.querySelector(".abc")
+
+        ortherBtn.addEventListener("click", handClick)
+
+        const delBtn = document.querySelector(".xyz")
+        delBtn.removeEventListener("click",function(){
+            ortherBtn.removeEventListener("click",handClick)
+        })
+        
+    </script>
+</body>
+</html>

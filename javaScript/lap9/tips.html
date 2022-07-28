@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <form action="" class="tip">
+            <div class="form-header">
+                Tip Calculator
+            </div>
+
+            <div class="form-fiel">
+                <label for="amount">Bill amount</label>
+                <input type="number" name="amount" id="amount">
+
+            </div>
+            <div class="form-fiel">
+                <label for="Guests">Number of Guests</label>
+                <input type="number" name="Guests" id="Guests">
+
+            </div>
+            <div class="form-fiel">
+                <label for="quanlity">Service quanlity</label>
+                <select name="" id="">  
+                    <option value="0.3">30% - Outstanding</option>
+                    <option value="0.2">20% - Good</option>
+                    <option value="0.15">15% - It's Ok</option>
+                    <option value="0.1">10% - Bad</option>
+                    <option value="0.05">5% - Terrible</option>
+                </select>
+
+            </div>
+
+            <div class="form-footer">
+                <div class="result"></div>
+                <button>Calculator</button>
+
+            </div>
+            
+        </form>
+    </div>
+
+
+    <script>
+        document.forms.tip.addEventListener("submit", function(e){
+            e.preventDefault();
+            const amount = this.element.amount.value;
+            const guests = this.element.guests.value;
+            const quanlity = this.element.quanlity.value;
+            
+            
+        })
+
+    </script>
+</body>
+</html>
