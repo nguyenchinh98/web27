@@ -7,68 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
-    <!-- <div id="product-list flex">
-        <div class="product">
-            <a href="">
-                <div class="product-thumnail">
-                    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                </div>
-
-                <div class="product-meta">
-                    <h3 class="product-title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h3>
-                    <div class="product-price">09.95</div>
-                </div>
-            </a>
-        </div>
-
-    </div> -->
-
+    <div id="app">
+      <div class="product-list">
+        
+      </div>
+    </div>
 
     <script>
-      const todos = [
-        {
-          id: 1,
-          completed: true,
-          content: "Learning HTML",
-        },
-        {
-          id: 2,
-          completed: true,
-          content: "Learning CSS",
-        },
-        {
-          id: 3,
-          completed: false,
-          content: "Learning JavaScript",
-        },
-      ];
-
-      const app = document.getElementById("app");
-
-      function createTodoItem(todo) {
-        // todo là 1 object
-        const div = document.createElement("div");
-        div.classList.add("todo");
-        div.textContent = todo.content;
-
-        if (todo.completed) {
-          div.classList.add("completed");
-        }
-        return div;
-      }
-
-      function createTodoList(todo) {
-        const list = document.createElement("div");
-        list.classList.add("todo-list");
-        todo.forEach(function (todo) {
-          list.append(createTodoItem(todo));
-        });
-        return list;
-      }
-
-      app.append(createTodoList(todos));
-
       const products = [
         {
           id: 1,
@@ -283,52 +228,42 @@
         },
       ];
 
-      function createProduct(product){
-        return `<div id="product-list flex">
-                    <div class="product">
-                        <a href="">
-                            <div class="product-thumnail">
-                                <img src="${product.image}" alt="">
-                            </div>
+      function createProduct(product) {
+        return ` 
+        <div class="product">
 
-                            <div class="product-meta">
-                                <h3 class="product-title">${product.title}</h3>
-                                <div class="product-price">${product.price}</div>
-                            </div>
-                        </a>
-                    </div>
+          <div class="product-thumbnail">
+            <img src="${product.image}" alt="">
+          </div>
 
-                </div>`;
-      }
+          <div class="product-meta">
+            <div class="title">${product.title}</div>
+            <div class="price">${product.price}</div>
+          </div>
 
+        </div>`
+      };
 
       function renderProductList(products){
-        const list = document.getElementById("product-list")
-        const items = products.map(function(product){
-            return createProduct(product)
-
-        })
-        list.innerHTML = items.join("")
-      }
-      renderProductList(products);
-
-
-    //   ///
-    //   function createThumnail(imageSrc){
-    //     const thumnail = document.createElement("div");
-    //     thumnail.classList.add("product-thumnail");
-
-    //     const img = document.createElement("img");
-    //     img.src = imageSrc;
-    //     img.alt = alt;
-
-    //     thumnail.append(img);
-    //     return thumnail;
-    //   }
-      
-    //   function createTitle()
-
+        const productList = document.createElement("div")
+        const item = products.map(function(product){
+          return createProduct(product);
+          
+        });
+        const el = productList.innerHTML = item.join("");
+        const app = document.getElementById("app");
+        app.innerHTML = el;
     
+      };
+
+      renderProductList(products)
+
+
+
+      
+
+
+
     </script>
   </body>
 </html>

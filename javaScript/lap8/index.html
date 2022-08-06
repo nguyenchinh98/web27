@@ -20,23 +20,25 @@
         "cherry",
         "coconut",
       ];
-      function createFruitItem(fruit){
-        const li = document.createElement("li");
-        li.textContent = fruit;
+
+      function createFruitItem(fruitList){
+        const li = document.createElement("li")
+        li.textContent = fruitList;
         return li;
       }
       
-      function createFruitList(){
-        const ul = document.createElement("ul")
 
-        fruitList.forEach(function(fruit){
-          ul.append(createFruitItem(fruit))
+      function createFruitList (){
+        const ul = document.createElement("ul");
+        fruitList.forEach(function(a){
+
+          ul.append(createFruitItem(a))
         })
         return ul;
       }
-      const app = document.querySelector("#app");
-      app.append(createFruitList());
-
+      const app = document.getElementById("app");
+      app.append(createFruitList())
+     
     </script>
   </body>
 </html>

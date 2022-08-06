@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+    <title>Photos</title>
     <style>
-        table{
-            width: 100%;;
+        .container{
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        table, tr, th, td {
-            border: 1px solid;
-            border-collapse: collapse;
-            padding: 8px 15px;
+        .user-list{
+            display: flex;
+            margin: 5px;
         }
+        .title{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .completed{
+            background-color: red;
+        }
+
     </style>
+    
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>STT</th>
-                <th>Title</th>
-                <th>Body</th>
-            </tr>
-        </thead>
-        <tbody class="t-body">
-
-        </tbody>
-    </table>
-    
+    <div class="container">
+        <div class="user-list">
+            <div>STT</div>
+            <div class="title"></div>
+            <button onclick="" class="btn-delete">X</button>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="bt.js"></script>
+    <script src="todos.js"></script>
 </body>
 </html>

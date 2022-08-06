@@ -19,56 +19,86 @@
             <h1 class="heading">Simple Todo App</h1>
         </header>
         <main class="main">
+
             <form action="todo" class="todo" name="todo">
                 <input type="text" name="title" id="">
                 <button class="btn-create">Create</button>
             </form>
 
             <div class="todo-list">
-                <div class="todo-item">
+                <!-- <div class="todo-item">
                     <input type="checkbox">
                     <span>Tiêu đề</span>
-                    <button class="btn-delete">Delete</button>
+                    <button onclick="" class="btn-delete">Delete</button>
                 </div>
+
                 <div class="todo-item completed">
                     <input type="checkbox" checked>
                     <span>Tieu de</span>
                     <button class="btn-delete">Delete</button>
-                </div>
+                </div> -->
             </div>
 
-
+            <div class="todo-summany">
+                <div class="pending"></div>
+                <button class="btn-clear"> Clear All</button>
+            </div>
         </main>
     </div>
     
 
     <script>
-       //input
-       const todos = [{
-        id: 1,
-        title:"Create todo app",
-        completed: false
-       },
-       {
-        id: 2,
-        title: "Learn jQuery",
-        completed: true,
-       }
-    ];
+       // render
+       const todos = [
+        {id: 1,title:"Create todo app",completed: false},
+        {id: 2,title: "Learn jQuery",completed: true,}
+        ];
 
-    const list = document.querySelector(".todo-list")
+    const list = document.querySelector(".todo-list");
+    const form = document.forms.todo;
     function renderTodoList(todos){
         const items = todos.map(function(todo){
             return `
-            <div class= ${!todo.completed ? "todo-item" : "todo-item completed"}>
-                <input type="checkbox" ${todo.completed ? "checked" : ""}>
+            <div class= "${!todo.completed ? "todo-item" : "todo-item completed"}">
+                <input type="checkbox" ${todo.completed ? "checked" : ""}/>
                 <span class="title">${todo.title}</span>
-                <button class="btn-delete">Delete</button>
+                <button onclick="deleteTodo(${todo.id})" class="btn-delete">Delete</button>
             </div> `;
         })
         list.innerHTML = items.join("")
     }
     renderTodoList(todos);
+
+    
+// xóa 
+    function deleteTodo(id){
+        if (confirm("Delete todo "+ id)){
+            const index = todos.findIndex(function(todo){
+                return todo.id === id;
+            });
+        todos.splice(index, 1);
+        renderTodoList(todos);
+        }
+    };
+
+
+// tạo mới
+    function createTodo(title){
+        const newTodo = {
+            id: Math.floor(Math.random() * 1000),
+            title,
+            completed: false
+        };
+        todos.push(newTodo);
+        renderTodoList(todos)
+    }
+   
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        const title = e.target.title.value;
+        createTodo(title)
+    })
 
 
     

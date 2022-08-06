@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .completed{
+            color: blue;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+        <div class="todos-list">
+            <div class="todo">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+      const todos = [
+        {
+          id: 1,
+          completed: true,
+          content: "Learning HTML",
+        },
+        {
+          id: 2,
+          completed: true,
+          content: "Learning CSS",
+        },
+        {
+          id: 3,
+          completed: false,
+          content: "Learning JavaScript",
+        },
+      ];
+
+
+       function createTodoItem (todo){
+         const div = document.createElement("div");
+         div.classList.add("todo");
+         div.textContent = todo.content;
+         if (todo.completed){
+             div.classList.add("completed")
+         }
+         return div;
+       }
+
+       function createTodoList(){
+         const todoList = document.createElement("div");
+         todoList.classList.add("todo-list");
+         todos.forEach(function(todo){
+             todoList.append(createTodoItem(todo))
+
+         });
+         return todoList;
+       }
+       console.log(createTodoList())
+
+       const app = document.getElementById("app");
+       app.append(createTodoList())
+
+      
+
+
+    </script>
+  </body>
+</html>
