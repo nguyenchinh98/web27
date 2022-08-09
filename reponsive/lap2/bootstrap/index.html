@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+        .banner {
+            background-color: #3b4a6b;
+            border-radius: 0 0 0 250px;
+        }
+        .card-hover:hover{
+            background-color: #97a0b6af;
+        }
+        .footer-hover:hover{
+            color: yellow;
+        }
+        
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light pt-3 pb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Timups</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <div class="container">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center fw-semibold">
+                            <li class="nav-item px-3">
+                                <a class="nav-link active " aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link active" aria-current="page" href="#">WATCHES</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link active" aria-current="page" href="#">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="">
+                        <a href=""><i class="bi bi-person-fill mx-1 text-dark"></i></a>
+                        <a href=""><i class="bi bi-cart-plus-fill mx-1 text-dark"></i></a>
+                        <a href=""><i class="bi bi-search text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="banner">
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active " data-bs-interval="1500">
+                        <div class="row p-5  align-items-center d-flex">
+                            <div class="col-12 col-md-6 mb-5">
+                                <div class="fw-bold text-light mt-4 mb-3 mt-lg-5 mb-lg-3">
+                                    <h1>Smart Watches</h1>
+                                </div>
+                                <div class="text-light">
+                                    <p>Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl,
+                                        convallis et augue
+                                        sit amet, lobortis semper quam</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning px-5 p-2">Concact Us</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-5 mb-lg-5">
+                                <img src="https://html.design/demo/timups/images/slider-img.png" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1500">
+                        <div class="row p-5 align-items-center d-flex">
+
+
+                            <div class="col-12 col-md-6 mb-5">
+                                <div class="fw-bold text-light mt-4 mb-3 mt-lg-5 mb-lg-3">
+                                    <h1>Smart Watches</h1>
+                                </div>
+                                <div class="text-light">
+                                    <p>Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl,
+                                        convallis et augue
+                                        sit amet, lobortis semper quam</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning px-5 p-2">Concact Us</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-5 mb-lg-5">
+                                <img src="https://html.design/demo/timups/images/slider-img.png" alt="...">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1500">
+                        <div class="row p-5 align-items-center d-flex">
+
+
+                            <div class="col-12 col-md-6 mb-5">
+                                <div class="fw-bold text-light mt-4 mb-3 mt-lg-5 mb-lg-3">
+                                    <h1>Smart Watches</h1>
+                                </div>
+                                <div class="text-light">
+                                    <p>Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl,
+                                        convallis et augue
+                                        sit amet, lobortis semper quam</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning px-5 p-2">Concact Us</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-5 mb-lg-5">
+                                <img src="https://html.design/demo/timups/images/slider-img.png" alt="...">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+
+
+            <!-- <div class="row p-5 align-items-center d-flex">
+                <div class="col-12 col-md-6 mb-5">
+                    <div class="fw-bold text-light mt-4 mb-3 mt-lg-5 mb-lg-3">
+                        <h1>Smart Watches</h1>
+                    </div>
+                    <div class="text-light">
+                        <p>Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue
+                            sit amet, lobortis semper quam</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-warning px-5">Concact Us</button>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                    <img src="https://html.design/demo/timups/images/slider-img.png" alt="">
+                </div> -->
+
+
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pb-5 pt-5">
+            <div class="mb-lg-5 mt-lg-5 mb-5 mt-5 text-center">
+                <h2 class="fw-bold">Latest Watches</h2>
+            </div>
+            <div class="card-list">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-12 col-md-6 d-flex justify-content-center">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none;">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w1.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class=" text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$300</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w2.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$125</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w3.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$110</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w4.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$145</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w5.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$195</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w6.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$170</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-12 col-md-6">
+                        <div class="card pt-5" style="width: 100%; background-color: #d6c2d625; border-style: none">
+                            <a href="" class="text-decoration-none">
+                                <div class="text-center">
+                                    <img src="https://html.design/demo/timups/images/w1.png" class="card-img-top "
+                                        style="width:6rem;" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-dark">Smartwatch</div>
+                                    <div><a href="" class="text-dark text-decoration-none">Price: <a href="" class="fw-bold text-dark text-decoration-none">$230</a></a></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 mb-5">
+                <button class="btn btn-warning  px-5">View All</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="background-color: #3b4a6b;">
+            <div class="container">
+                <div class="row d-flex align-items-center g-5 pb-5">
+                    <div class="col-lg-5 col-12 col-md-6">
+                        <div style="width:24rem; margin-left: auto; margin-right: auto;">
+                            <img src="https://html.design/demo/timups/images/about-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 text-light">
+                        <div class="">
+                            <h1>About Us</h1>
+                        </div>
+                        <div class="mt-lg-3 mb-lg-4 mt-4 mb-4">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form, by injected humour, or randomised words which don't
+                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                                need to be sure there isn't anything embarrassing hidden in the middle of text. All
+                            </p>
+                        </div>
+
+                        <div class="">
+                            <button class="btn btn-warning text-light px-5 p-2">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-header text-center p-2 pt-5 pb-4">
+                <h2 class="fw-bold">Features Of Our Watches</h2>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="section-card">
+                <div class="card-list">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card text-center p-3 shadow card-hover" style="width: 100%;">
+                                <div>
+                                    <img src="https://html.design/demo/timups/images/f1.png" class="card-img-top"
+                                        style="width:5rem" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Fitness Tracking</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    </p>
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        Read More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card text-center p-3 shadow card-hover" style="width: 100%;">
+                                <div>
+                                    <img src="https://html.design/demo/timups/images/f2.png" class="card-img-top"
+                                        style="width:5rem" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Alerts & Notifications</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    </p>
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        Read More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card text-center p-3 shadow card-hover" style="width: 100%;">
+                                <div>
+                                    <img src="https://html.design/demo/timups/images/f3.png" class="card-img-top"
+                                        style="width:5rem" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Messages</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    </p>
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        Read More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card text-center p-3 shadow card-hover" style="width: 100%;">
+                                <div>
+                                    <img src="https://html.design/demo/timups/images/f4.png" class="card-img-top"
+                                        style="width:5rem" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bluetooth</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    </p>
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        Read More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center p-4 mt-4">
+                <button class="btn btn-warning px-5 text-light p-2">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-form mt-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 col-12 col-md-6">
+                        <div class="form-header mb-lg-5">
+                            <h2 class="fw-bold">Contact Us</h2>
+                        </div>
+
+                        <div class="mb-4">
+                            <input type="text" class="form-control p-2" id="exampleFormControlInput1" placeholder="Name">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="form-control p-2" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+
+                        <div class="mb-4">
+                            <input type="number" class="form-control p-2" id="exampleFormControlInput1"
+                                placeholder="Phone number">
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control p-2" id="exampleFormControlTextarea1" rows="3">Message</textarea>
+                        </div>
+
+
+                        <div>
+                            <button class="btn btn-warning px-5 mt-4">SEND</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 text-center col-12 col-md-6">
+                        <img src="https://html.design/demo/timups/images/contact-img.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mb-5">
+            <div class="section-header text-center p-5">
+                <h2 class="fw-bold">Testimonial</h2>
+            </div>
+            <div class="post-list">
+                <div class="row g-5">
+                    <div class="col-lg-6 col-12 col-md-6">
+                        <div class="post text-light p-4" style="background-color: #3b4a6b; border-radius: 20px;">
+                            <div class="post-user text-center">
+                                <div class="avatar-user">
+                                    <img src="https://html.design/demo/timups/images/c1.jpg"
+                                        style="width:8rem; border-radius: 50%;" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <h4>MARK THOMAS</h>
+                                        <h5>CUSTOMER</h5>
+                                        <i class="bi bi-quote"></i>
+                                </div>
+                                <div class="user-description">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium unde itaque
+                                        totam ullam laborum, maiores corrupti, quae id, amet voluptate rerum error
+                                        eveniet dignissimos commodi fuga quibusdam excepturi debitis. Excepturi!</p>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <h2></h2>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 col-md-6">
+                        <div class="post text-light p-4" style="background-color: #3b4a6b; border-radius: 20px;">
+                            <div class="post-user text-center">
+                                <div class="avatar-user">
+                                    <img src="https://html.design/demo/timups/images/c2.jpg"
+                                        style="width:8rem; border-radius: 50%;" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <h4>ALINA HANS</h>
+                                        <h5>CUSTOMER</h5>
+                                        <i class="bi bi-quote"></i>
+                                </div>
+                                <div class="user-description">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium unde itaque
+                                        totam ullam laborum, maiores corrupti, quae id, amet voluptate rerum error
+                                        eveniet dignissimos commodi fuga quibusdam excepturi debitis. Excepturi!</p>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <h2></h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div style="background-color: #3b4a6b;">
+            <div class="container">
+                <div class="row text-light g-2">
+                    <div class="col-lg-4 mt-lg-5 mt-5 col-12 col-md-6">
+                        <div class="fw-bold">
+                            <h3>About</h3>
+                        </div>
+                        <div>
+                            <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of
+                                over 200 Latin words, combined with</p>
+                        </div>
+                        <div class="fs-5">
+                            <a href="" class=""><i class="bi bi-facebook text-light"></i></a>
+                            <a href=""><i class="bi bi-twitter text-light"></i></a>
+                            <a href=""><i class="bi bi-linkedin text-light"></i></a>
+                            <a href=""><i class="bi bi-instagram text-light"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-lg-5 mt-5 col-12 col-md-6" >
+                        <div>
+                            <h3>Reach at..</h3>
+                        </div>
+                        <div class="">
+                            <div>
+                                <a href="" class=" text-light text-decoration-none ">
+                                    <div class="footer-hover d-flex">
+                                        <i class="bi bi-geo-alt-fill " ></i>
+                                        <p class="px-2">Location</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class=" text-light text-decoration-none">
+                                    <div class="footer-hover d-flex">
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <p class="px-2">Call +84 123456</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class=" text-light text-decoration-none">
+                                    <div class="footer-hover d-flex">
+                                        <i class="bi bi-envelope-fill"></i>
+                                        <p class="px-2">demo@gmail.com</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-lg-5 mt-5 col-12 col-md-6">
+                        <div>
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                            
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="mb-3 ">
+                                <button class="btn btn-warning text-light">Subscribe</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="text-light text-center mt-lg-5 pb-3 pt-5">
+                    <p>© 2022 All Rights Reserved By Free Html Templates</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script
+</body>
+</html>
