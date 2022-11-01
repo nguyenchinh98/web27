@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+
+            <div class="form-header">
+                <h2>Thông tin liên hệ</h2>
+            </div>
+
+
+            <div class="form-body">
+                <div class="form-field flex flex-column">
+                    <label for="name">Họ tên</label>
+                    <input type="text" name="name" id="name" placeholder="Họ Tên">
+                </div>
+                <div class="form-field flex flex-column">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <p>Địa chỉ</p>
+
+                <div class="flex j-between">
+                    <div class="form-field">
+                        <label for="provinces">Thành phố</label>
+                        <select name="provinces" id="provinces">
+                            <option value=""> Chọn thành phố</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="district">Quận huyện</label>
+                        <select name="district" id="district">
+                            <option value="">Chọn Quận huyện</option>
+                        
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="ward">Phường xã</label>
+                        <select name="ward" id="ward">
+                            <option value="ward"> Chọn phường xã</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field flex flex-column">
+                    <label for="address">Địa chỉ cụ thể</label>
+                    <textarea name="address" id="address" cols="30" rows="10">Địa chỉ cụ thể</textarea>
+                </div>
+
+                <button class="btn-submit">
+                    Gửi thông tin liên hệ
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

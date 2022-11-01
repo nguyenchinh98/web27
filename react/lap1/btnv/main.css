@@ -1,0 +1,68 @@
+.app{
+    background-color: #f2f5f8;
+    width: 500px;
+    margin: 30px auto;
+}
+body {
+  font-family: sans-serif;
+}
+.card{
+    padding: 30px;
+}
+.header{
+    margin-bottom: 50px;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+}
+/* .author {
+  text-align: center;
+} */
+.name{
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+}
+.job {
+  text-transform: uppercase;
+  color: #5a97d0;
+  margin-top: 8px;
+  text-align: center;
+}
+.avatar{
+    position: relative;
+}
+.avatar img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 5px -5px #5a97d0;
+}
+.avatar i{
+    position: absolute;
+    top: 0;
+    left: 145px;
+    padding: 8.6px 10px;
+    
+    border-radius: 100px;
+    background-color: #5a97d0;
+    color: white;
+}
+.text-content{
+    text-align: center;
+}
+.control{
+    text-align: center;
+}
+i{
+    color: #5a97d0;
+    font-size: 18px;
+}
+button{
+    border: none;
+    background-color:#f2f5f8;
+}
