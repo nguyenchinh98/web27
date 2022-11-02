@@ -1,0 +1,31 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+img{
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+p{
+    font-size: 18px;
+}
+table{
+    width: 900px;
+    margin: 0 auto;
+}
+table, td, th{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 8px;
+    font-size: 18px;
+}
+th{
+    font-size: 24px;
+}
+td{
+    width: 450px;
+}
+.part2{
+    margin-bottom: 50px;
+}

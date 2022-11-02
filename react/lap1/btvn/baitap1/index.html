@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="part1">
+            <h1> 1. Class Component là gì? Ví dụ Component sứ dụng Class Component</h1>
+            <p>
+                Class Component là Class trong ES6, nó sẽ là 1 Component khi nó kế thừa React Component.
+            </p>
+            <h2>Khởi tạo 1 Class Component:</h2>
+            <p>Khi tạo một Class Component, tên của Component phải viết hoa chữ cái đầu tiên</p>
+            <p>Một Class Component phải bao gồm câu lệnh React.Component mở rộng. Câu lệnh này tạo sự kế thừa cho
+                React.Component và
+                cấp
+                cho Component của bạn quyền truy cập vào các chức năng của React.Component.</p>
+            <p>Component cũng yêu cầu một phương thức render (), phương thức này trả về HTML.</p>
+            <h2>Ví dụ:</h2>
+            <img src="./asset/ex1.png" alt="">
+            <p>
+                Nếu có một hàm constructor () trong Component của bạn, thì hàm này sẽ được gọi khi Component được khởi
+                tạo.
+                Hàm khởi tạo là nơi bạn khởi tạo các thuộc tính của Component.
+            </p>
+            <p>
+                Trong React, các thuộc tính của Component nên được giữ trong một đối tượng được gọi là trạng thái
+                (State).
+                Hàm khởi tạo cũng tuân theo sự kế thừa của Component cha bằng cách bao gồm câu lệnh super (), thực thi
+                hàm
+                tạo của Component cha và Component của bạn có quyền truy cập vào tất cả các chức năng của Component cha
+                (React.Component).
+            </p>
+            <h2>Ví dụ</h2>
+            <img src="./asset/ex2.png" alt="">
+            <div>
+                <p>Một cách khác để xử lý các thuộc tính Component là sử dụng Props.
+                    Props giống như các đối số của hàm và bạn gửi chúng vào Component dưới dạng thuộc tính.</p>
+                <p>Nếu component của bạn có một hàm khởi tạo, thì các Props phải luôn được chuyển cho hàm tạo và cả
+                    React.Component thông
+                    qua phương thức super().</p>
+                <h2>Ví dụ</h2>
+                <img src="./asset/ex3.png" alt="">
+            </div>
+        </div>
+        <div class="part2">
+            <h1>2. Sự khác nhau giữa Class Component và Function Component</h1>
+            <table>
+                <tr>
+                    <th>Class Component</th>
+                    <th>Function Component</th>
+                </tr>
+                <tr>
+                    <td>- Là class của ES6</td>
+                    <td>- Là function Javascript / ES6 function</td>
+                </tr>
+                <tr>
+                    <td>- Extend từ React.Component</td>
+                    <td>- KO Extend từ React.Component</td>
+                </tr>
+                <tr>
+                    <td>- Gọi là component trạng thái</td>
+                    <td>- Được gọi là các thành phần không trạng thái</td>
+                </tr>
+                <tr>
+                    <td>- Có thể phản hồi các sự kiện vòng đời (lifecycle)</td>
+                    <td>- Không phản hồi các sự kiện trong vòng đời (lifecycle)</td>
+                </tr>
+                <tr>
+                    <td>- Duy trì thông tin trạng thái</td>
+                    <td>- Không duy trì thông tin trạng thái</td>
+                </tr>
+                <tr>
+                    <td>- Yêu cầu một hàm tạo (constructor) lưu trữ trạng thái trước khi chúng có thể được sử dụng để
+                        chuyển các Props cho
+                        class cha
+                    </td>
+                    <td>- Không hỗ trợ một hàm tạo (constructor)</td>
+                </tr>
+                <tr>
+                    <td>- Yêu cầu một hàm Render() trả về một phần tử HTML</td>
+                    <td>- Trả lại các phần tử HTML hoặc không có gì</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

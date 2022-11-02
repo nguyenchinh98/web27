@@ -26,13 +26,11 @@ function Info(){
       </div>
     );
 }
-
 function Content(){
     return <p className="text-content">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis sapiente quos rerum veniam provident quibusdam optio eum fuga amet laudantium repudiandae eius, debitis ipsa quis autem, vitae aut aperiam natus.
     </p>
 }
-
 function Control(){
     return (
       <div className="control">
@@ -41,7 +39,6 @@ function Control(){
       </div>
     );
 }
-
 function App(){
     return (
       <div className="card">
