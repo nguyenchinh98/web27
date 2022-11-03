@@ -15,10 +15,10 @@ const users = [
   },
   {
     id: "accfd2a3e37a693a11f3ab7f",
-    fullname: "Thầy Tiến Bịp",
+    fullname: "Tiến Bịp",
     avatar:
       "https://s.memehay.com/files/posts/20210507/giang-ho-tien-bip-noi-con-cai-nit.jpeg",
-    job: "International Accounts Supervisor",
+    job: "Bậc thầy nói phét",
   },
   {
     id: "c7fcfccf527daabcfee0ac6d",
