@@ -1,26 +1,21 @@
-const arrays = [
+const users = [
     {
-        id: 1,
-        name: "Java",
-        coin: 0,
+        name: "Chinh",
+        age: 24,
+        job: "student"
     },
     {
-        id: 2,
-        name: "Php",
-        coin: 10,
-    },
-    {
-        id: 3,
-        name: "Python",
-        coin: 0,
-    },
-    {
-        id: 4,
-        name: "JavaScript",
-        coin: 100,
-    },
+        name: "Quỳnh",
+        age: 22,
+        job: "student"
+    }
 ]
-const totalCoin = arrays.reduce((total, array) => {
-    return total += array.coin
-}, 0)
-console.log(totalCoin)
+
+const love = users.map((user) => {
+    return {
+        name: "Têm " + user.name,
+        age: user.age,
+        
+    }
+})
+console.log(love)
