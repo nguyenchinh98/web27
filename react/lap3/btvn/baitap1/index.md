@@ -56,5 +56,12 @@ changeColor là props được truyền từ ParentComponent. Chúng ta sẽ g�
 # 4. Controlled Form vs Uncontrolled Form
 Trong React, có hai cách để xử lý dữ liệu  **form** trong các component là sử dụng trạng thái trong component để xử lý dữ liệu form . Đây được gọi là thành phần được kiểm soát (Controlled component).Cách thứ hai là để DOM tự xử lý dữ liệu **form** trong component. Đây được biết đến như một thành phần không được kiểm soát (Uncontrolled component)
 ## Controlled Form
+form được sử dụng để lưu trữ thông tin trong một phần tài liệu. Thông tin từ form này thường được gửi đến một máy chủ để thực hiện một hành động. Dữ liệu này được giữ bởi các phần tử input form và các phần tử điều khiển, chẳng hạn như **input**, **select**, **textarea**, v.v., các phần tử này duy trì và kiểm soát trạng thái hoặc giá trị của chúng.
 
+Mỗi phần tử form chứa một giá trị. Giá trị có thể được nhập (input, textarea) hoặc được chọn (**checkbox,** **select**, **radiobutton**, v.v.) bởi người dùng hoặc trình duyệt. Khi giá trị của phần tử bị thay đổi (được kích hoạt bởi thao tác nhập hoặc chọn), giá trị đó sẽ được cập nhật tương ứng.
+Bạn có thể lấy giá trị của một phần tử bằng cách sử dụng thuộc tính **.value**. Bạn cũng có thể sử dụng thuộc tính **.value** để đặt giá trị trong các phần tử form.
+Bây giờ chúng ta có thể sử dụng trạng thái trong component của mình để giữ hoặc quản lý các giá trị của các phần tử trong một phần tử form. 
 
+Đây là một ví dụ:
+
+![image](image.png)
