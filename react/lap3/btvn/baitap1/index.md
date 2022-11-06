@@ -64,4 +64,30 @@ Bây giờ chúng ta có thể sử dụng trạng thái trong component của m
 
 Đây là một ví dụ:
 
-![image](image.png)
+![image](https://user-images.githubusercontent.com/107029410/200189960-3472e346-1d83-4365-8516-8252bf2cf6f5.png)
+
+Ở đây chúng ta có hai State: name và email. Các State này được gán cho thuộc tính giá trị của phần tử input name và email.
+
+State name giữ giá trị của phần tử input name. Khi một giá trị đang được nhập vào input name, sự kiện onChange sẽ cập nhật giá trị của input name thay đổi State name bằng cách sử dụng setName().
+
+State email giữ giá trị của phần tử input email. Sự kiện onChange cập nhật giá trị input email thay đổi State email thông qua setEmail() để giữ giá trị được nhập vào phần tử.
+
+Như bạn có thể thấy, các giá trị của phần tử input name và email của chúng tôi được kiểm soát bởi State React. Do đó, thành phần Ứng dụng được hiển thị ở trên là thành phần được kiểm soát.
+
+Hạn chế của việc sử dụng các thành phần được điều khiển là số lượng State trong một thành phần tăng lên khi nhiều phần tử điều khiển được thêm vào phần tử form.
+
+## Uncontrolled Form
+Các thành phần không được kiểm soát là những thành phần mà dữ liệu form được xử lý bởi chính DOM. “Uncontrolled” đề cập đến thực tế là các thành phần này không được kiểm soát bởi State React.
+
+Các giá trị của các phần tử form được kiểm soát và lưu trữ trên DOM theo cách truyền thống. Chúng ta sẽ phải tham chiếu đến phiên bản của các phần tử form để lấy các giá trị của chúng từ DOM.
+
+![image](https://user-images.githubusercontent.com/107029410/200190632-fd338ef7-a5e7-4413-a97b-d4aaab3e7432.png)
+
+Trong đoạn code trên, chúng ta đã gán các thuộc tính ID cho các phần tử input name và email với các giá trị name và email tương ứng. Chúng ta sử dụng các thuộc tính id này để nhận giá trị của phần tử input khi form đang được gửi.
+
+Thành phần trên là một thành phần không được kiểm soát vì React không có quyền kiểm soát các giá trị của các phần tử input của form.
+### Uncontrolled Form trong React
+
+![image](https://user-images.githubusercontent.com/107029410/200190884-0fead419-b3bd-402d-be9e-b895b1f9e2d8.png)
+
+Chúng ta đã tạo hai refs React, nameRef và emailRef, và gán chúng cho các thuộc tính ref của form name và email tương ứng. Điều này sẽ khiến các refs giữ các phiên bản HTMLElement của các phần tử trong thuộc tính **.current** của chúng. Từ **.current**, chúng ta có thể tham chiếu thuộc tính **.value** để lấy giá trị của các phần tử form.

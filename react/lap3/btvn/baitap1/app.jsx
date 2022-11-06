@@ -101,3 +101,34 @@ function App() {
     </form>
   );
 }
+
+function App() {
+  function onSubmit() {
+    console.log("Name value: " + window.name.value);
+    console.log("Email value: " + window.email.value);
+  }
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="text" name="name" id="name" required />
+      <input type="email" name="email" id="email" required />
+      <input type="submit" value="Submit" />
+    </form>
+  );
+}
+
+
+function App() {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  function onSubmit() {
+    console.log("Name value: " + nameRef.current.value);
+    console.log("Email value: " + emailRef.current.value);
+  }
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="text" name="name" ref={nameRef} required />
+      <input type="email" name="email" ref={emailRef} required />
+      <input type="submit" value="Submit" />
+    </form>
+  );
+}
