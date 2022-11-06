@@ -43,9 +43,11 @@ Mô hình luồng dữ liệu 2 chiều có nghĩa là  khi dữ liệu ứng d�
 ![image](https://user-images.githubusercontent.com/107029410/200186062-063d2c0a-e1f2-4aea-81ba-1071c8255f28.png)
 
 **Component Cha**
+
 ![image](https://user-images.githubusercontent.com/107029410/200186141-a7f42a48-5dfc-4e1b-8390-eb1c81f257d9.png)
 
 **Component Con**
+
 ![image](https://user-images.githubusercontent.com/107029410/200186184-8c818013-1c3c-4f8b-af1a-de1d869c0400.png)
 
 Chúng tôi sẽ sử dụng prop changeColor trong hàm  handleClick để cập nhật màu sắc. 
