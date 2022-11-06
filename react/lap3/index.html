@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Xử lý sự kiện
+    + Cách gán sự kiện: gán trực tiếp vào các thuộc tính sự kiện trên jsx element
+    + các thuộc tính sự kiện dạng cameCaml: onClick
+    + Truyền trực tiếpcac giá trị hàm
+            const OnClick = () =>{}
+        onClick= {handleClick} 
+    + Để truyền thêm tham số thì sd arrow fc:
+            const handleChange = (event, name) => {}
+        onClick = {e} => handleChange(e, "Chinh")
+        onClick = {handleChange.bind()} => handleChange(e, "Chinh")
+    + EventObj
+
+    *** State: Cho phép các component ghi nhớ các giá trị khi state thay đổi
+        - Chú ý: khi state thay đổi giá trị thì component sẽ render lại để khớp với dữ liệu hiện tại
+    ***** Hooks:
+        + Là các hàm đặc biệt cho phép fc component sd đc các tính năng giống class component -> Biến dc component thành Statefull
+        + all các hooks đều bắt đầu bằng use => useState, useEffect,...
+        + Có thể tự tạo custom hook dựa trên các hook có sẵn
+        + useState
+        + useEffect
+        + useRef
+        + useContext-->
+    <div id="#app">
+    </div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    
+    <script src="Pokemon.jsx" type="text/babel"></script>
+    <script src="PokemonList.jsx" type="text/babel"></script>
+    <!-- <script src="./Event.jsx" type="text/babel"></script>
+    <script src="./app.jsx" type="text/babel"></script> -->
+</body>
+</html>

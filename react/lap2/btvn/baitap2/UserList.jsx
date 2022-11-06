@@ -141,7 +141,7 @@ const users = [
   },
 ];
 function UserList() {
-  const userlist = users.map((user) => <UserCard user={user} />);
+  const userlist = users.map((user) => <UserCard user={user} key={user.id}/>);
   return (
     <div className="container bg-secondary bg-opacity-10 mt-2">
       <h2 className="text-center p-3">List User</h2>
