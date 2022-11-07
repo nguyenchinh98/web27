@@ -6,7 +6,7 @@ Vấn đề là useState cho phép bạn xác định trạng thái ban đầu c
 
 ![image](https://user-images.githubusercontent.com/107029410/200182392-8feaba4a-8ceb-4d74-8da1-dbd6905f28c5.png)
 
-`Cách khắc phục là khởi tạo useState() với kiểu dữ liệu bạn mong muốn`
+**Cách khắc phục là khởi tạo useState() với kiểu dữ liệu bạn mong muốn**
 
 ![image](https://user-images.githubusercontent.com/107029410/200182568-16ae44a3-ee2d-4605-9972-8daf3e2b1e07.png)
 * ## useState sử dụng REPLANCING chứ không phải MERGING
@@ -18,7 +18,7 @@ Vấn đề là useState cho phép bạn xác định trạng thái ban đầu c
 
 ![image](https://user-images.githubusercontent.com/107029410/200180015-2d1e4259-43fe-4d09-8fd9-2409499cf4ed.png)
 
-`Vậy giải pháp để giữ được state ban đầu là sử dụng cú pháp '...'`
+**Vậy giải pháp để giữ được state ban đầu là sử dụng cú pháp '...'**
 
 ![image](https://user-images.githubusercontent.com/107029410/200180701-c50db61f-40d3-4381-a5bc-dae3acca2fb3.png)
 
@@ -26,7 +26,7 @@ Vấn đề là useState cho phép bạn xác định trạng thái ban đầu c
 
 ![image](https://user-images.githubusercontent.com/107029410/200182016-728b61f2-2013-4456-b322-0d39238eaccf.png)
 
-`Giải pháp là sử dụng initial state callback để chạy 1 lần`
+**Giải pháp là sử dụng initial state callback để chạy 1 lần**
 
 ![image](https://user-images.githubusercontent.com/107029410/200182113-4068332d-9f72-4a77-96d4-f1f2844f13bb.png)
 
