@@ -77,7 +77,7 @@ Như bạn có thể thấy, các giá trị của phần tử input name và em
 Hạn chế của việc sử dụng các thành phần được điều khiển là số lượng State trong một thành phần tăng lên khi nhiều phần tử điều khiển được thêm vào phần tử form.
 
 ## Uncontrolled Form
-Các thành phần không được kiểm soát là những thành phần mà dữ liệu form được xử lý bởi chính DOM. “Uncontrolled” đề cập đến thực tế là các thành phần này không được kiểm soát bởi State React.
+ là những thành phần mà dữ liệu form được xử lý bởi chính DOM. “Uncontrolled” đề cập đến thực tế là các thành phần này không được kiểm soát bởi State React.
 
 Các giá trị của các phần tử form được kiểm soát và lưu trữ trên DOM theo cách truyền thống. Chúng ta sẽ phải tham chiếu đến phiên bản của các phần tử form để lấy các giá trị của chúng từ DOM.
 
@@ -91,3 +91,65 @@ Thành phần trên là một thành phần không được kiểm soát vì Rea
 ![image](https://user-images.githubusercontent.com/107029410/200190884-0fead419-b3bd-402d-be9e-b895b1f9e2d8.png)
 
 Chúng ta đã tạo hai refs React, nameRef và emailRef, và gán chúng cho các thuộc tính ref của form name và email tương ứng. Điều này sẽ khiến các refs giữ các phiên bản HTMLElement của các phần tử trong thuộc tính **.current** của chúng. Từ **.current**, chúng ta có thể tham chiếu thuộc tính **.value** để lấy giá trị của các phần tử form.
+
+# 5. Life cycle vs useEffect
+Về cơ bản, **useEffect Hook**  được dùng mục đích để quản lý vòng đời của một component. Chúng ta sử dụng hook này trong các function component thay thế các lifecycle trong class component (cơ bản là giống nhau).
+## Cú pháp của useEffect()
+
+![image](https://user-images.githubusercontent.com/107029410/200219296-0296745e-0cb4-41c4-beb4-26c63a7a3b0d.png)
+
+Trong đó:
+* effectFunction: gọi là side-effect function, thường được để bạn thực hiện logic chương trình khi useEffect được gọi.
+* arrayDependencies: mảng phụ thuộc, cơ bản là để bạn xác định khi nào thì hàm side-effect được gọi.
+## React useEffect Hook: luôn luôn gọi
+
+Hãy cùng xem xét ví dụ đầu tiên về cách sử dụng useEffect Hook của React. Trong đó, chúng ta truyền vào useEffect một hàm – hay gọi là side-effect function.
+
+![image](https://user-images.githubusercontent.com/107029410/200219646-33f67ec1-025a-452e-b0a3-26cb05c89e3b.png)
+
+Đây là cách sử dụng đơn giản nhất. Trong đó, chúng ta chỉ truyền một đối số – là một hàm số. Hàm này sẽ được gọi mọi lúc – bất cứ khi nào component được render để hiển thị (bao gồm cả lúc update hoặc tạo mới component).
+
+## React useEffect Hook: chỉ gọi lúc component được mount xong
+
+Nếu bạn chỉ muốn chạy `useEffect Hook` duy nhất lúc component được mount (lần đầu tiên component hiển thị), bạn chỉ cần truyền vào mảng rỗng vào đối số thứ 2 của `useEffect`
+
+![image](https://user-images.githubusercontent.com/107029410/200219899-03cf5f1d-a349-48a7-aaf2-0fe3b7f3b161.png)
+
+Tham số thứ hai – ở đây chúng ta truyền vào là mảng rỗng – gọi là **dependency array**. Nếu dependency array là rỗng, thì hàm side-effect trong đối số thứ nhất không có dependencies. Điều này có nghĩa là nó chỉ chạy duy nhất lần đầu tiên khi component hiển thị.
+
+## React useEffect Hook: gọi khi update giá trị điều kiện
+
+Trong trường hợp dependency array  không phải là mảng rỗng thì sao?
+
+Nếu mảng này có phần tử, mỗi khi giá trị của phần tử thay đổi, hàm side-effect sẽ được gọi.
+
+![image](https://user-images.githubusercontent.com/107029410/200220059-4171327c-a2d4-466b-8423-1da9ef47a506.png)
+
+Như ví dụ trên, hàm side-effect để  in ra màn hình `console.log("...")` sẽ được gọi khi biến toggle thay đổi giá trị. Tuy nhiên, bạn cũng cần phải lưu ý rằng, hàm side-effect cũng được gọi khi lần đầu tiên component hiển thị (khi component mount).
+
+Ngoài ra, một điểm cũng cần lưu tâm, dependency array dù sao cũng là một mảng nên nó có thể chứa nhiều hơn một phần tử. Do vậy, bạn có thể thêm nhiều biến hơn vào mảng này, tùy vào mục đích của bạn.
+
+![image](https://user-images.githubusercontent.com/107029410/200220647-7923c669-d8d6-4231-892a-2197c65ed898.png)
+
+## React useEffect Hook: UnMount
+
+Bạn đã biết cách sử dụng `useEffect()` khi một component mount xong. Vậy khi component chuẩn bị remove khỏi DOM thì sao?
+
+![image](https://user-images.githubusercontent.com/107029410/200220809-159fafe0-90d6-4a64-9cd2-e130b8262012.png)
+
+Thì thực tế thì `useEffect` cho phép chúng ta return  một function, function này sẽ thực thi trước khi mà component đó được unmounted.
+
+## Đối chiếu Component lifecycle với useEffect Hook
+
+1. ComponentDidMount()
+Tương ứng với lifecycle này là cách viết sau:
+
+![image](https://user-images.githubusercontent.com/107029410/200221071-1396d6bf-3b8c-44d4-94c5-9804f5c92c4e.png)
+
+2. ComponentDidUpdate()
+
+![image](https://user-images.githubusercontent.com/107029410/200221241-9b3d5a83-f5aa-429c-8023-292e2331171e.png)
+
+3. ComponentWillUnMount()
+
+![image](https://user-images.githubusercontent.com/107029410/200221109-1b0479c6-cd41-487b-921d-4055cdd06e7a.png)

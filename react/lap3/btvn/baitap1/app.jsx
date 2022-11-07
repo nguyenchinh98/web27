@@ -132,3 +132,30 @@ function App() {
     </form>
   );
 }
+
+//syntax
+useEffect(effectFunction, arrayDependencies)
+
+const App = () => {
+  const [timer, setTimer] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(
+      () => setTimer((currentTimer) => currentTimer + 1),
+      1000
+    );
+    return () => clearInterval(interval);
+  }, []);
+  return <div>{timer}</div>;
+};
+
+useEffect(() => {
+  // Bạn viết code xử lý logic tại đây
+});
+
+useEffect(() => {
+  // hàm được trả về sẽ được gọi khi component unmount
+  return () => {
+    // Bạn viết code xử lý logic tại đây khi component unmount.
+  };
+}, []);
