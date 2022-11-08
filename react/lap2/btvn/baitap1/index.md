@@ -4,6 +4,7 @@
 * Các key nên được truyền vào các element bên trong một mảng để cho các element này có một định danh cố định (stable identity):
 
 *** Ví dụ:
+
 ![image](https://user-images.githubusercontent.com/107029410/200620744-3f4f0c84-5d35-4774-a0b9-2908e5dddedc.png)
 
 * Các tốt nhất để chọn một key là sử dụng một chuỗi mà được xác định là duy nhất trong các nút anh em (siblings). 
