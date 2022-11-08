@@ -1,6 +1,6 @@
 .container{
     width: 600px;
-    height: 220px;
+    height: 260px;
     margin: 0px auto;
     background-color: #e0dede;
 
@@ -11,19 +11,31 @@ h1{
 }
 .control{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
-.control i {
-    margin: 20px;
+.control-top{
+    display: flex;
 }
-.bi-play{
+.control i {
+    
+
+}
+.bi-play, .bi-pause{
     font-size: 32px;
 }
 button{
     cursor: pointer;
     margin: 0 10px;
+    border: none;
+    background-color: #e0dede;
+}
+
+.time-slide input{
+    width: 300px;
+    margin-top: 20px;
 }
 img{
     width: 50px;
