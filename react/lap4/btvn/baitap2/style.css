@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 600px;
+    margin: 20px auto;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+.todo-item{
+    display: flex;
+    margin: 8px auto;
+    justify-content: space-between;
+    font-size: 18px;
+    background-color: rgb(218, 216, 216);
+    padding: 6px;
+
+}
+
+.btn-delete{
+    border: none;
+    background-color: rgb(218, 216, 216);
+}
+.input-job{
+    width: 100%;
+    font-size: 16px;
+    padding: 0 8px;
+}
+.create-job{
+    width: 100px;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+.form-job{
+    display: flex;
+    padding: 20px 0;
+}
+.todo-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+}
+.btn-clearAll{
+    padding: 8px;
+    font-size: 16px;
+}
+.count-job{
+    font-size: 18px;
+}

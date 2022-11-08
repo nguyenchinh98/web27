@@ -93,25 +93,32 @@
 //     )
 // }
 
-const Todo = ({user}) => {
+const Todo = ({todo}) => {
     return (
-        <div className="todo">
-            <div className="user-id">{user.userId}</div>
-            <div className="title">{user.title}</div>
-            <div className="body">{user.body}</div>
+        <div className="todo-item">
+            <input 
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => {}}
+            />
+            <p>{todo.title}</p>
+
         </div>
     )
 }
-const TodoList = () => {
-    const list = users.map(({ user }) => {
-        return <Todo/>
-    })
+const handleChange = () => {
+    
+}
+const TodoList = ({todos}) => {
+    const list = todos.map((todo) => <Todo todo={todo} key={todo.id}/>)
+    return <div className="todo-list">
+        {list}
+    </div>
 }
 const App = () => {
     // useEffect để đồng bộ trạng thái với API bên ngoài
     // client State
     const [todos, setTodos] = React.useState([])
-    
     React.useEffect(() => {
         const Controller = new AbortController()
         // Server State
@@ -127,7 +134,7 @@ const App = () => {
     return (
         <div>
             <div className="todo-app">Todos App</div>
-            <Todo />
+            <TodoList todos={todos}/>
         </div>
     )
 }
