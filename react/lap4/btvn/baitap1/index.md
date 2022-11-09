@@ -72,7 +72,49 @@ Ta khai báo component là Consumer và hiển thị giá trị cho người dù
 
 ![image](https://user-images.githubusercontent.com/107029410/200743665-cc5094e9-b96c-4355-8d2d-02179f006391.png)
 
-Ở trên, ta đã thêm consumer dưới dạng đối tượng **`Theme.Consumer`** và ta thấy rằng bên trong nó định nghĩa một hàm có tham số truyền vào là giá trị của **`**theme`**. Ta hiển thị giá trị của **`theme`** vào trong thẻ**` div`**.
+Ở trên, ta đã thêm consumer dưới dạng đối tượng **`Theme.Consumer`** và ta thấy rằng bên trong nó định nghĩa một hàm có tham số truyền vào là giá trị của **`**theme`**. Ta hiển thị giá trị của **`theme`** vào trong thẻ **`div`**.
+
+Bạn có nghĩ đến tại sao ta lại đặt giá trị mặc định trong component Theme? Giá trị mặc định trên sẽ không được sử dụng nếu ta khai báo Provider. Tuy nhiên, nếu ta thiếu một component Provider, thì nó sẽ sử dụng đến giá trị mặc định. Vì vậy, đoạn mã sau sẽ xuất ra **`dark`** dưới dạng giá trị, chính là giá trị mà ta đặt cho Provider.
+
+![image](https://user-images.githubusercontent.com/107029410/200781770-9260f029-0fd1-4a7a-b021-4f225823589c.png)
+
+Và với đoạn mã sau đây thì giá trị có nó sẽ là light:
+
+![image](https://user-images.githubusercontent.com/107029410/200781942-4cc4d9fe-5f9b-48ac-9625-de270a680475.png)
+
+### * **Sử dụng**
+
+Ta có thể đưa thành phần Consumer đưa vào component như sau:
+
+![image](https://user-images.githubusercontent.com/107029410/200782834-e2719581-4755-4d69-89af-792dacadcd2d.png)
+
+Ở **sample.js** có thể viết gọn như sau:
+
+![image](https://user-images.githubusercontent.com/107029410/200783018-3645980c-5321-4127-994b-6fba92860ccc.png)
+
+Bạn thấy rằng giá trị từ provider đang được truyền qua các props và ta có thể truy cập vào thuộc tính **`theme`** thông qua Consumer.
+
+# 3. Tìm nạp dữ liệu với useEffect
+# 4. Custom hook là gì? Ví dụ một custom hook.
+## 4.1 Custom Hook là gì?
+
+Custom hooks là việc các bạn tự tạo ra một hook mới với chức năng riêng biệt của nó. Việc này giúp tách phần code logic ra khỏi UI giúp code tường minh, dễ quản lý hơn, tránh lặp lại code và tái sử dụng.
+
+Ví dụ khi bạn không dùng custom hook:
+
+![image](https://user-images.githubusercontent.com/107029410/200785124-034334ed-cc47-4fa2-8323-121853b6002f.png)
+
+và bây giờ nếu bạn muốn dùng window width ở component khác thì phải lặp lại phần code trên. Đây là lúc **custom hooks** phát huy tác dụng.
+
+## 4.2 Xây dựng custom hooks
+
+![image](https://user-images.githubusercontent.com/107029410/200786004-923b07fc-d100-4b16-87f1-023afb6a5d94.png)
+
+Và đây là thành quả của chúng ta, bạn có thể sử dụng hook useWindowSize ở bất kì component nào.
+
+![image](https://user-images.githubusercontent.com/107029410/200786190-96af231e-dbcb-4b74-97d7-75d3f379e663.png)
+
+
 
 
 

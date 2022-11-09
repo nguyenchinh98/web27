@@ -56,7 +56,59 @@
 //   );
 // }
 
-// theme.js
-import React from 'react';
-const ThemeContext = React.createContext('light');
-export default ThemeContext;
+// // theme.js
+// import React from 'react';
+// const ThemeContext = React.createContext('light');
+// export default ThemeContext;
+
+
+
+// const Sample = () => (
+// //   <Theme.Consumer>{(theme) => <div>Theme value: {theme}</div>}</Theme.Consumer>
+// );
+
+// DynamicContext.js
+
+
+// const App = () => {
+//   const [width, setWidth] = useState < number > window.innerWidth;
+//   useEffect(() => {
+//     const handler = () => {
+//       setWidth(window.innerWidth);
+//     };
+//     window.addEventListener("resize", handler);
+//     return () => {
+//       window.removeEventListener("resize", handler);
+//     };
+//   }, []);
+//   return <>{width >= 1024 && <Sidebar />}</>;
+// };
+
+// import { useState, useEffect } from "react";
+// export const useWindowSize = () => {
+//   const [windowSize, setWindowSize] = useState({
+//     width: window.innerWidth,
+//     height: window.innerHeight,
+//   });
+//   useEffect(() => {
+//     const handler = () => {
+//       setWindowSize({
+//         width: window.innerWidth,
+//         height: window.innerHeight,
+//       });
+//     };
+//     window.addEventListener("resize", handler);
+//     return () => {
+//       window.removeEventListener("resize", handler);
+//     };
+//   }, []);
+//   return windowSize;
+// };
+
+import { useWindowSize } from "hooks";
+
+const App = () => {
+  const { width, height } = useWindowSize();
+
+  return <>{width >= 1024 && <Sidebar />}</>;
+};
