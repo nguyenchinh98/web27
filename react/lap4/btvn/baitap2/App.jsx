@@ -1,59 +1,96 @@
 
-const App = () => {
-    const storageJobs = JSON.parse(localStorage.getItem("jobs"))
-    const [job, setJob] = React.useState("")
-    const [jobs, setJobs] = React.useState(storageJobs);
-    const handleSubmit = () => {
-        setJobs(prev => {
-            const newJobs = [...prev, job]
-            const jsonJobs = JSON.stringify(newJobs)
-            localStorage.setItem("jobs", jsonJobs)
-            return newJobs
-        })
-        setJob("")
+// const App = () => {
+//     const storageJobs = JSON.parse(localStorage.getItem("jobs"))
+//     const [job, setJob] = React.useState("")
+//     const [jobs, setJobs] = React.useState(storageJobs);
+//     const handleSubmit = () => {
+//         setJobs(prev => {
+//             const newJobs = [...prev, job]
+//             const jsonJobs = JSON.stringify(newJobs)
+//             localStorage.setItem("jobs", jsonJobs)
+//             return newJobs
+//         })
+//         setJob("")
+//     }
+//     const deleteTodo = (index) => {
+//         alert(index)
+//         const newList = list;
+//         newList.splice(index, 1)
+//         setJobs([...newList])
+//     }
+   
+
+
+const App = () => {{
+    const [currentInput, setCurrentInput] = React.useState("");
+    const [jobs, setJobs] = React.useState([]);
+
+    const AddTodo = () => {
+         const newJobs = jobs;
+         newJobs.unshift({todoItem: currentInput});
+         setJobs([...newJobs]);
+         setCurrentInput("")
     }
     const deleteTodo = (index) => {
         alert(index)
-        const newList = list;
-        newList.splice(index, 1)
-        setJobs([...newList])
+        const newJobs = jobs;
+        newJobs.splice(index, 1);
+        setJobs([...jobs]);
     }
+    const clearAll = () => {
+        setJobs([])
+        setCount(0)
+    }
+    const [count, setCount] = React.useState(0);
+    const up = () => {
+        setCount(count + 1)
+    }
+    const down = () => {
+        setCount(count - 1)
+    }
+
    
     return (
-        <div className="container">
-            <h1 className="">Todo List</h1>
-            <form action="">
-                <div className="form-job">
-                    <input
-                        type="text"
-                        placeholder="What do you want to do?"
-                        value={job}
-                        onChange={(e) => setJob(e.target.value)}
-                        className="input-job"
-                    />
-                    <button className="create-job" onClick={(e) => {
+      <div className="container">
+        <h1>Todo List</h1>
+        <form action="">
+            <div className="form-job">
+                <input
+                    className="input-job"
+                    type="text"
+                    onChange={(e) => {setCurrentInput(e.target.value)}}
+                    value={currentInput}
+                />
+                <button 
+                    className="create-job"
+                    onClick={(e) => {
                         e.preventDefault();
-                        handleSubmit(e)
-                    }}>Create</button>
-                </div>
-
-                {jobs.map((job, index) => (
-                    <div key={index} className="todo-item">
-                        <input type="checkbox" />       
-                        <p> {job} </p>
-                        <button className="btn-delete">
-                            <i className="bi bi-x-circle"></i>
-                        </button>
-                    </div>
-                ))}
-            </form>
-            <div className="todo-bottom">
-                <div className="count-job">You have {} pending task</div>
-                <button className="btn-clearAll">Clear All</button>
+                        AddTodo(e)
+                        up(e)
+                    }}
+                >Create</button>
             </div>
+        </form>
+        {jobs.map(({todoItem}, index) => {
+            return (
+              <div className="todo-item" key={index}>
+                <input type="checkbox" />
+                <p> {todoItem} </p>
+                <button className="btn-delete" onClick={() => {
+                        deleteTodo(index);
+                        down()
+                    }}>
+                  <i className="bi bi-x-circle"></i>
+                </button>
+              </div>
+            );
+        })}
+        <div className="todo-bottom">
+            <div className="">You have <span>{count}</span> pending task</div>
+            <button className="btn-clearAll" onClick={clearAll}>Clear All</button>
         </div>
+      </div>
     );
-};
-
+}}
 const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(<App />);

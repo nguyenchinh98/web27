@@ -6,9 +6,10 @@
 .container{
     width: 600px;
     margin: 20px auto;
-    background-color: aquamarine;
+    background-color: rgb(145, 227, 57);
     text-align: center;
     padding: 20px;
+    border-radius: 8px;
 }
 h1{
     text-align: center;
@@ -18,24 +19,43 @@ h1{
     margin: 8px auto;
     justify-content: space-between;
     font-size: 18px;
-    background-color: rgb(218, 216, 216);
-    padding: 6px;
-
+    background-color: white;
+    padding: 8px;
+    align-items: center;
+    border-radius: 8px;
 }
 
 .btn-delete{
+    background-color: red;
+    padding: 8px 24px ;
     border: none;
-    background-color: rgb(218, 216, 216);
+    border-radius: 8px;
+}
+.btn-delete:hover{
+    cursor: pointer;
+    color: red;
+}
+.bi-x-circle{
+    font-size: 18px;
+    color: white;
 }
 .input-job{
     width: 100%;
     font-size: 16px;
     padding: 0 8px;
+    border-radius: 8px;
+    
 }
 .create-job{
     width: 100px;
     padding: 10px 8px;
     font-size: 16px;
+    border-radius: 8px;
+    background-color: yellow;
+}
+.create-job:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 0, 0.704);
 }
 .form-job{
     display: flex;
@@ -50,7 +70,18 @@ h1{
 .btn-clearAll{
     padding: 8px;
     font-size: 16px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+}
+.btn-clearAll:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.47);
 }
 .count-job{
     font-size: 18px;
+}
+
+span{
+    color:red;
 }
