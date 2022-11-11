@@ -1,26 +1,4 @@
 
-// const App = () => {
-//     const storageJobs = JSON.parse(localStorage.getItem("jobs"))
-//     const [job, setJob] = React.useState("")
-//     const [jobs, setJobs] = React.useState(storageJobs);
-//     const handleSubmit = () => {
-//         setJobs(prev => {
-//             const newJobs = [...prev, job]
-//             const jsonJobs = JSON.stringify(newJobs)
-//             localStorage.setItem("jobs", jsonJobs)
-//             return newJobs
-//         })
-//         setJob("")
-//     }
-//     const deleteTodo = (index) => {
-//         alert(index)
-//         const newList = list;
-//         newList.splice(index, 1)
-//         setJobs([...newList])
-//     }
-   
-
-
 const App = () => {{
     const [currentInput, setCurrentInput] = React.useState("");
     const [jobs, setJobs] = React.useState([]);
